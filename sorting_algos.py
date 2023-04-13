@@ -49,3 +49,5 @@ if __name__ == '__main__':
     print(selection_sort(test[:]))
     print()
     print(insertion_sort(test[:]))
+    
+    
