@@ -1,11 +1,14 @@
 # SWDV 610: Data Structures and Algorithms
+# Simple hash table using a dictionary
 
 class HashDict:
+    """Simple hash table class that stores data in a dictionary"""
     def __init__(self, hash_val=1000):
         self._data = {}
         self._hash_val = hash_val
 
     def _hash(self, val):
+        """Hashes a value using an accumulation of ordinal values"""
         acc = 0
         for char in str(val):
             acc += ord(char)
@@ -13,6 +16,7 @@ class HashDict:
         return acc % self._hash_val
     
     def insert(self, val):
+        """Inserts val into the data dictionary"""
         hash_idx = self._hash(val)
         self._data[hash_idx] = val
     
