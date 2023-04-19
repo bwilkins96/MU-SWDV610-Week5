@@ -11,7 +11,7 @@ def bubble_sort(lst):
             if lst[i] > lst[i+1]:
                 lst[i], lst[i+1] = lst[i+1], lst[i]
                 sorted = False
-    
+
     return lst
 
 def selection_sort(lst):
@@ -32,7 +32,7 @@ def insertion_sort(lst):
     for i in range(1, len(lst)):
         val = lst[i]
         position = i
-        
+
         while position > 0 and lst[position-1] > val:
             lst[position] = lst[position-1]
             position -= 1
@@ -42,12 +42,10 @@ def insertion_sort(lst):
     return lst
 
 if __name__ == '__main__':
-    test = [5, 6, 8, 1, 3, 9, 2, 4, 7, 10]
-    
+    test = [6,4,7,8,1,0,10,9,2,3,5]
+
     print(bubble_sort(test[:]))
     print()
     print(selection_sort(test[:]))
     print()
     print(insertion_sort(test[:]))
-    
-    
